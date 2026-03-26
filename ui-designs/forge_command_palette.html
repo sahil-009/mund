@@ -1,0 +1,63 @@
+
+<div style="background:#0d0d0f;border-radius:10px;overflow:hidden;font-family:'JetBrains Mono',monospace;width:100%;min-height:500px;display:flex;flex-direction:column;position:relative;">
+  <!-- Blurred editor behind -->
+  <div style="height:38px;background:#080809;border-bottom:1px solid #1a1a20;display:flex;align-items:center;padding:0;flex-shrink:0;filter:blur(0.5px);opacity:0.5;">
+    <div style="display:flex;align-items:center;gap:6px;padding:0 12px;"><div style="width:6px;height:6px;background:#e8a020;border-radius:50%;"></div><span style="color:#e8a020;font-size:13px;font-weight:700;letter-spacing:0.08em;">FORGE</span></div>
+    <div style="flex:1;text-align:center;font-size:11px;color:#52525e;">~/projects/forge-demo/main.cpp</div>
+  </div>
+  <!-- Editor body (blurred/dimmed) -->
+  <div style="flex:1;background:#0d0d0f;opacity:0.3;filter:blur(1px);padding:20px 60px;font-size:13px;line-height:1.65;color:#c4c4cc;">
+    <div><span style="color:#c792ea;">#include</span> <span style="color:#6ee7a0;">&lt;iostream&gt;</span></div>
+    <div><span style="color:#f0c06e;">int</span> <span style="color:#dcdcf0;">main</span>() {</div>
+    <div><span style="margin-left:24px;"></span><span style="color:#9cdcfe;">std</span>::<span style="color:#9cdcfe;">cout</span> &lt;&lt; <span style="color:#6ee7a0;">"Hello from FORGE!\n"</span>;</div>
+    <div><span style="margin-left:24px;"></span><span style="color:#e8a020;">return</span> <span style="color:#79b8ff;">0</span>;</div>
+    <div>}</div>
+  </div>
+  <!-- Overlay backdrop -->
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(2px);display:flex;align-items:flex-start;justify-content:center;padding-top:60px;">
+    <!-- Palette box -->
+    <div style="width:520px;background:#0f0f14;border:1px solid #222228;border-radius:6px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.8);">
+      <!-- Input -->
+      <div style="display:flex;align-items:center;border-bottom:1px solid #1a1a20;padding:0 16px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#52525e" stroke-width="2" style="flex-shrink:0;margin-right:8px;"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input value="run" style="flex:1;background:transparent;border:none;padding:14px 0;font-family:'JetBrains Mono',monospace;font-size:14px;color:#e8e8f0;outline:none;caret-color:#e8a020;" readonly>
+      </div>
+      <!-- Results -->
+      <div>
+        <!-- Focused item -->
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 16px;background:#16161c;">
+          <span style="color:#e8a020;font-size:13px;width:18px;flex-shrink:0;">▶</span>
+          <span style="color:#e8e8f0;font-size:12.5px;flex:1;">Run: <span style="color:#f5b832;font-weight:600;">Run</span> Current File</span>
+          <span style="display:flex;gap:3px;"><kbd style="background:#1a1a24;border:1px solid #2a2a34;padding:1px 5px;border-radius:2px;font-size:10px;color:#52525e;font-family:'JetBrains Mono',monospace;">F5</kbd></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 16px;">
+          <span style="color:#52525e;font-size:13px;width:18px;flex-shrink:0;">■</span>
+          <span style="color:#c4c4cc;font-size:12.5px;flex:1;">Run: Stop Process</span>
+          <span style="display:flex;gap:3px;"><kbd style="background:#1a1a24;border:1px solid #2a2a34;padding:1px 5px;border-radius:2px;font-size:10px;color:#52525e;font-family:'JetBrains Mono',monospace;">F7</kbd></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 16px;">
+          <span style="color:#52525e;font-size:13px;width:18px;flex-shrink:0;">▶</span>
+          <span style="color:#c4c4cc;font-size:12.5px;flex:1;">File: <span style="color:#f5b832;font-weight:600;">Run</span> As…</span>
+        </div>
+        <div style="height:1px;background:#1a1a20;margin:2px 0;"></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 16px;">
+          <span style="color:#52525e;font-size:13px;width:18px;flex-shrink:0;">📄</span>
+          <span style="color:#c4c4cc;font-size:12.5px;flex:1;">File: New File</span>
+          <span style="display:flex;gap:3px;"><kbd style="background:#1a1a24;border:1px solid #2a2a34;padding:1px 5px;border-radius:2px;font-size:10px;color:#52525e;font-family:'JetBrains Mono',monospace;">Ctrl</kbd><kbd style="background:#1a1a24;border:1px solid #2a2a34;padding:1px 5px;border-radius:2px;font-size:10px;color:#52525e;font-family:'JetBrains Mono',monospace;">N</kbd></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 16px;">
+          <span style="color:#52525e;font-size:13px;width:18px;flex-shrink:0;">⚙</span>
+          <span style="color:#c4c4cc;font-size:12.5px;flex:1;">View: Show Settings</span>
+        </div>
+      </div>
+      <!-- Hint -->
+      <div style="padding:7px 16px;border-top:1px solid #1a1a20;font-size:10.5px;color:#2e2e38;">↑↓ navigate · Enter select · Esc close</div>
+    </div>
+  </div>
+  <!-- Status bar -->
+  <div style="height:24px;background:#e8a020;display:flex;align-items:center;flex-shrink:0;">
+    <div style="padding:0 10px;font-size:11px;font-weight:700;color:#000;">terminal</div>
+    <div style="flex:1;"></div>
+    <div style="padding:0 9px;font-size:11px;font-weight:700;color:#000;">C++</div>
+  </div>
+</div>

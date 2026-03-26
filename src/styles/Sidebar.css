@@ -1,0 +1,121 @@
+.sidebar {
+  display: flex;
+  width: 250px;
+  background-color: var(--secondary-bg);
+  border-right: 1px solid var(--border-color);
+  height: 100vh;
+}
+
+.activity-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--tertiary-bg);
+  width: 50px;
+  border-right: 1px solid var(--border-color);
+}
+
+.activity-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  color: var(--text-secondary);
+}
+
+.activity-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.activity-btn.active {
+  background-color: var(--accent-color);
+  color: var(--secondary-bg);
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.explorer-header {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.explorer-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.explorer-empty button {
+  padding: 8px 12px;
+  background-color: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.explorer-empty button:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.file-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-item {
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-primary);
+  transition: background-color 0.2s;
+}
+
+.file-item:hover {
+  background-color: var(--tertiary-bg);
+}
+
+.search-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.search-input {
+  padding: 8px;
+  background-color: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+
+.search-results {
+  color: var(--text-secondary);
+  font-size: 12px;
+  padding: 8px;
+}

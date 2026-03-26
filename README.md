@@ -1,8 +1,8 @@
-README for FORGE - Code Editor
+README for mund - a fast code editor for devs
 
-## FORGE: Fast Code Editor for Engineers
+## mund: a fast code editor for devs
 
-A lightweight, high-performance code editor built with Electron for Linux. FORGE supports C++, Java, JavaScript, HTML, and CSS with a focus on speed and efficiency.
+A lightweight, high-performance code editor built with Electron for Linux. mund supports C++, Java, JavaScript, HTML, and CSS with a focus on speed and efficiency.
 
 ### Features
 

@@ -1,0 +1,76 @@
+{
+  "name": "mund",
+  "version": "0.1.0",
+  "description": "MUND - A fast code editor for C++, Java, JavaScript, HTML, CSS. Linux native.",
+  "main": "electron/main.js",
+  "homepage": "./",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"NODE_ENV=development npm run dev\" \"wait-on http://localhost:3000 && NODE_ENV=development electron .\"",
+    "dev": "webpack serve --mode development --config webpack.dev.js",
+    "build": "webpack --mode production --config webpack.prod.js",
+    "electron": "NODE_ENV=development electron .",
+    "dist": "npm run build && electron-builder",
+    "dist:deb": "npm run build && electron-builder --linux deb",
+    "dist:appimage": "npm run build && electron-builder --linux AppImage",
+    "dist:all": "npm run build && electron-builder --linux deb AppImage",
+    "pack": "electron-builder --dir",
+    "pretest": "npm run build"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "monaco-editor": "^0.44.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "xterm": "^5.3.0",
+    "xterm-addon-fit": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "concurrently": "^8.2.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.0",
+    "electron-devtools-installer": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.0",
+    "ts-loader": "^9.4.0",
+    "typescript": "^5.0.0",
+    "wait-on": "^7.0.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "build": {
+    "appId": "com.mund.mund",
+    "productName": "MUND",
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "executableName": "mund"
+    },
+    "deb": {
+      "depends": [
+        "gconf2",
+        "gconf-service",
+        "libappindicator1",
+        "libnotify4",
+        "libxss1",
+        "libxtst6",
+        "xdg-utils",
+        "fonts-dejavu-core"
+      ]
+    }
+  }
+}
